@@ -17,13 +17,23 @@ def read_file_ints(file_path: str) -> list:
     return lines
 
 def read_file_lines_whitespace(file_path: str) -> list:
-    """Read all of the lines of a file into a string array"""
+    """Read all of the lines of a file into a string array (keeps whitespace characters)"""
     lines = []
     file = open(file_path, "r")
     raw_lines = file.readlines()
     for line in raw_lines:
         lines.append(line.replace("\n", ""))
     return lines
+
+def read_file_as_string(file_path: str) -> list:
+    """Read all of the lines of a file into a single string"""
+    lines = []
+    file = open(file_path, "r")
+    raw_lines = file.readlines()
+    string = ""
+    for line in raw_lines:
+        string += line.strip()
+    return string
 
 def find_common_char(strings: list) -> str:
     """Find the character that is common between two or more strings"""
