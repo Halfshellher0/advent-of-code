@@ -79,7 +79,7 @@ def find_lt_100k() -> int:
             total += dir.size()
     return total
 
-data = utils.read_file_lines_whitespace(sample_path)
+data = utils.read_file_lines(sample_path)
 root_Dir = Dir("/", None) 
 construct_tree(data, root_Dir)
 tree_to_list(root_Dir)
@@ -97,7 +97,3 @@ for dir in dirs:
     if dir_size >= threshold:
         above_threshold_dirs.append(dir_size)
 print(min(above_threshold_dirs))
-
-
-
-
