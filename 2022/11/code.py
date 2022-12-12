@@ -106,7 +106,7 @@ for monkey in monkeys:
     divisors.append(monkey.divisible)
 lowest_common_multiple = lcm(divisors)
 
-# 20 Rounds of inspection
+# 10000 Rounds of inspection
 for i in range(10000):
     for monkey in monkeys:
         monkey.inspect_all_items(worry_divided=False, lcm=lowest_common_multiple)
