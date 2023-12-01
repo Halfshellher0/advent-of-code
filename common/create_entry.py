@@ -11,7 +11,7 @@ path = path / year / day
 if not os.path.exists(path):
     os.mkdir(path)
 
-shutil.copyfile(template_path, path / "code.py")
+shutil.copyfile(template_path, path / "main.py")
 with open(path / "input.txt", 'w') as new_file: 
    pass
 with open(path / "sample.txt", 'w') as new_file: 
